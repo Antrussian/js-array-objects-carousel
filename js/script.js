@@ -48,3 +48,27 @@ const images = [
 ];
 
 
+ 
+const wrapperElement = document.getElementById('carousel-container'); 
+const imageContainer = document.querySelector('.my-carousel-images');
+ 
+ images.forEach(image => {
+   const newImageElement = document.createElement('img');
+   const newTitleElement = document.createElement ('p');
+   const newTextElement = document.createElement ('p');
+
+
+   newImageElement.src = image.image; // imposta l'attributo src con l'URL dell'immagine
+   newImageElement.alt = image.title; // imposta l'attributo alt con il titolo dell'immagine
+   newTitleElement.textContent = image.title;
+   newTextElement.textContent = image.text;
+
+
+
+
+   imageContainer.appendChild(newImageElement); // aggiungi l'immagine al container
+   imageContainer.appendChild(newTitleElement);
+   imageContainer.appendChild(newTextElement);
+ });
+ 
+ 
